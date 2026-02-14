@@ -1,65 +1,251 @@
 import Image from "next/image";
+import PackageCard from "@/components/PackageCard";
 
 export default function Home() {
+  const packages: Array<{
+    name: string;
+    price: string;
+    services: string[];
+    brandIdentity: boolean;
+    webDev: "static" | "dynamic";
+  }> = [
+    {
+      name: "Basic",
+      price: "20,000 ETB",
+      services: [
+        "Logo Design (3 logo options)",
+        "Color Palette",
+        "Typography",
+        "Brand Pattern",
+        "Static Website (up to 5 pages)",
+        "Responsive Design",
+        "Basic SEO Setup",
+      ],
+      brandIdentity: true,
+      webDev: "static",
+    },
+    {
+      name: "Professional",
+      price: "30,000 ETB",
+      services: [
+        "Logo Design (5 logo options)",
+        "Color Palette",
+        "Typography",
+        "Brand Pattern",
+        "Stationery Design",
+        "Social Media Kit",
+        "Dynamic Website (CMS-based)",
+        "Up to 8 pages",
+        "Responsive Design",
+        "SEO Setup",
+        "Contact Form Integration",
+      ],
+      brandIdentity: true,
+      webDev: "dynamic",
+    },
+    {
+      name: "Premium",
+      price: "40,000 ETB",
+      services: [
+        "Logo Design (7 logo options)",
+        "Color Palette",
+        "Typography",
+        "Brand Pattern",
+        "Full Branding Collateral",
+        "Brand Guidelines",
+        "Publication Design",
+        "Social Media Kit",
+        "Dynamic Website (CMS-based)",
+        "Unlimited pages",
+        "Blog System",
+        "Admin Dashboard",
+        "Responsive Design",
+        "Advanced SEO",
+        "Google Maps Integration",
+        "Domain & Hosting Setup",
+        "Website Maintenance Plan",
+      ],
+      brandIdentity: true,
+      webDev: "dynamic",
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex items-center gap-4">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/exodus-logo.png"
+              alt="Exodus Solutions Logo"
+              width={60}
+              height={60}
+              className="object-contain"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div>
+              <h1 className="text-2xl font-bold text-[#1a1a2e]">
+                Exodus <span className="text-[#6c5ce7]">Solution</span>
+              </h1>
+            </div>
+          </div>
         </div>
-      </main>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-5xl font-bold mb-6">
+              Creative Branding & Web Development
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A creative and technology-driven agency providing branding, design,
+              and web development services for businesses seeking a modern and
+              professional digital presence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-12">
+            Our Services
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Brand Identity */}
+            <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#6c5ce7]">
+              <h3 className="text-2xl font-bold text-[#1a1a2e] mb-4">
+                Brand Identity
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Delivering a cohesive and recognizable brand system.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-[#6c5ce7] mr-2">•</span>
+                  <span className="text-gray-700">
+                    <strong>Logo Design</strong> – Icons, fonts, color palette,
+                    and variations.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#6c5ce7] mr-2">•</span>
+                  <span className="text-gray-700">
+                    <strong>Brand Guidelines</strong> – Usage rules, tone,
+                    typography, and color standards.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#6c5ce7] mr-2">•</span>
+                  <span className="text-gray-700">
+                    <strong>Publication Design</strong> – Banner, flyer,
+                    brochure, billboard, business card, and letterhead.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#6c5ce7] mr-2">•</span>
+                  <span className="text-gray-700">
+                    <strong>Social Media Kit</strong> – Profile icons, cover
+                    banners, and post templates.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Website Design & Development */}
+            <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#1a1a2e]">
+              <h3 className="text-2xl font-bold text-[#1a1a2e] mb-4">
+                Website Design & Development
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Building professional and responsive websites tailored to the
+                client&apos;s goals.
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-[#1a1a2e] mb-2">
+                    Website Structure
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    Up to X pages (Home, About, Services, Contact, etc.).
+                    Additional pages upon request.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#1a1a2e] mb-2">Type</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Static Website (Informational, minimal content updates)</li>
+                    <li>• Dynamic Website (CMS-based, editable content, blog, admin dashboard, etc.)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#1a1a2e] mb-2">Features</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Responsive design (mobile-friendly)</li>
+                    <li>• Basic SEO setup</li>
+                    <li>• Google Maps and contact form integration</li>
+                    <li>• Domain & hosting setup (optional)</li>
+                    <li>• Website maintenance (optional plan)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Package Cards */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-12">
+            Service Packages
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {packages.map((pkg, index) => (
+              <PackageCard key={index} {...pkg} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <footer className="bg-[#1a1a2e] text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">For Any Query:</h3>
+              <div className="space-y-3">
+                <p>
+                  <strong>Email Us:</strong>{" "}
+                  <a
+                    href="mailto:matiyassamuel86@gmail.com"
+                    className="text-[#a29bfe] hover:underline"
+                  >
+                    matiyassamuel86@gmail.com
+                  </a>
+                </p>
+                <p>
+                  <strong>Call Us:</strong>{" "}
+                  <a
+                    href="tel:0940596262"
+                    className="text-[#a29bfe] hover:underline"
+                  >
+                    0940596262
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="text-right md:text-left">
+              <p className="text-gray-400 mb-2">Provided by</p>
+              <p className="text-xl font-bold">MATIYAS SAMUEL</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
