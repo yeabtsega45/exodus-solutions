@@ -108,6 +108,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Text Section */}
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight">
+                Let's build, grow, and
+                <br />
+                <span className="text-[#6c5ce7]">elevate your brand</span>
+                <br />
+                together!
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We are a full-service digital agency specializing in web development,
+                branding and 360° Marketing. With experience working with over 40
+                clients, we have successfully driven revenue growth through innovative
+                digital solutions.
+              </p>
+            </div>
+
+            {/* Right Content Section - Stats */}
+            <div className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] rounded-lg p-8 md:p-12 text-white">
+              <div className="space-y-8">
+                {/* Experience Section */}
+                <div className="flex items-end gap-4">
+                  <h3 className="text-7xl md:text-8xl font-extrabold text-white leading-none">
+                    5
+                  </h3>
+                  <div className="pb-2">
+                    <p className="uppercase text-sm font-semibold text-gray-300 tracking-wide">
+                      years
+                    </p>
+                    <p className="text-xl md:text-2xl font-bold text-white">
+                      Of Experience
+                    </p>
+                  </div>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
+                  <div>
+                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">40+</p>
+                    <p className="text-sm text-gray-300 uppercase tracking-wide">
+                      Clients
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">100+</p>
+                    <p className="text-sm text-gray-300 uppercase tracking-wide">
+                      Projects
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
