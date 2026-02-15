@@ -304,6 +304,16 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.type.map((type, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-xs font-semibold rounded-full bg-[#6c5ce7]/10 text-[#6c5ce7]"
+                    >
+                      {type}
+                    </span>
+                  ))}
+                </div>
                   <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
                     {project.title}
                   </h3>

@@ -7,25 +7,41 @@ function Footer() {
       <div className="grid md:grid-cols-3 gap-8 mb-8">
         {/* Contact Section */}
         <div>
-          <h3 className="text-2xl font-bold mb-6 text-white">For Any Query:</h3>
+          <h3 className="text-2xl font-bold mb-6 text-white">For Any Questions:</h3>
           <div className="space-y-4">
             <div>
               <p className="font-semibold text-gray-300 mb-1">Email Us:</p>
-              <a
-                href="mailto:matiyassamuel86@gmail.com"
-                className="text-[#a29bfe] hover:text-[#6c5ce7] hover:underline transition-colors"
-              >
-                matiyassamuel86@gmail.com
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="mailto:matiyassamuel86@gmail.com"
+                  className="text-[#a29bfe] hover:text-[#6c5ce7] hover:underline transition-colors"
+                >
+                  matiyassamuel86@gmail.com
+                </a>
+                <a
+                  href="mailto:yabtsega2022@gmail.com"
+                  className="text-[#a29bfe] hover:text-[#6c5ce7] hover:underline transition-colors"
+                >
+                  yabtsega2022@gmail.com
+                </a>
+              </div>
             </div>
             <div>
               <p className="font-semibold text-gray-300 mb-1">Call Us:</p>
-              <a
-                href="tel:0940596262"
-                className="text-[#a29bfe] hover:text-[#6c5ce7] hover:underline transition-colors"
-              >
-                0940596262
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="tel:0940596262"
+                  className="text-[#a29bfe] hover:text-[#6c5ce7] hover:underline transition-colors"
+                >
+                  0940596262
+                </a>
+                <a
+                  href="tel:0912704375"
+                  className="text-[#a29bfe] hover:text-[#6c5ce7] hover:underline transition-colors"
+                >
+                  0912704375
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -43,7 +59,7 @@ function Footer() {
         {/* Provided By Section */}
         <div className="text-center md:text-right">
           <p className="text-gray-400 mb-2 text-sm">Provided by</p>
-          <p className="text-xl font-bold text-white">MATIYAS SAMUEL</p>
+          <p className="text-xl font-bold text-white">EXODUS SOLUTIONS</p>
           <div className="mt-6 flex justify-center md:justify-end">
             <div className="flex items-center gap-2">
               <Image
