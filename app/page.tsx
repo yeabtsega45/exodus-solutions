@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PackageCard from "@/components/PackageCard";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   const packages: Array<{
@@ -289,65 +290,27 @@ export default function Home() {
             branding projects
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Project 1 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-64 bg-gray-100 overflow-hidden">
-                <Image
-                  src="/DNA LIONS Tax Pro Software.png"
-                  alt="DNA LIONS Tax Pro Software"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+              >
+                <div className="relative h-64 bg-gray-100 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{project.description}</p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
-                  DNA LIONS Tax Pro Software
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Professional tax software solution with modern UI/UX design
-                </p>
-              </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-64 bg-gray-100 overflow-hidden">
-                <Image
-                  src="/Logic TrueCare.png"
-                  alt="Logic TrueCare"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
-                  Logic TrueCare
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Healthcare management platform with intuitive design
-                </p>
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-64 bg-gray-100 overflow-hidden">
-                <Image
-                  src="/T&T Security Services LLC.png"
-                  alt="T&T Security Services LLC"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
-                  T&T Security Services LLC
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Security services company branding and web presence
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
