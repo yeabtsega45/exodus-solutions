@@ -272,6 +272,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
+            Our Projects
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Showcasing our expertise through successful digital solutions and
+            branding projects
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Project 1 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+              <div className="relative h-64 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/DNA LIONS Tax Pro Software.png"
+                  alt="DNA LIONS Tax Pro Software"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
+                  DNA LIONS Tax Pro Software
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Professional tax software solution with modern UI/UX design
+                </p>
+              </div>
+            </div>
+
+            {/* Project 2 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+              <div className="relative h-64 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/Logic TrueCare.png"
+                  alt="Logic TrueCare"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
+                  Logic TrueCare
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Healthcare management platform with intuitive design
+                </p>
+              </div>
+            </div>
+
+            {/* Project 3 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+              <div className="relative h-64 bg-gray-100 overflow-hidden">
+                <Image
+                  src="/T&T Security Services LLC.png"
+                  alt="T&T Security Services LLC"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
+                  T&T Security Services LLC
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Security services company branding and web presence
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer Section */}
       <footer className="bg-[#1a1a2e] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
