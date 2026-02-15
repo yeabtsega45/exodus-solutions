@@ -36,7 +36,7 @@ function Navbar() {
               Home
             </Link>
             <Link
-              href="/#projects"
+              href="/projects"
               className="text-[#1a1a2e] font-medium hover:text-[#6c5ce7] transition-colors"
             >
               Projects
@@ -95,7 +95,7 @@ function Navbar() {
                 Home
               </Link>
               <Link
-                href="/#projects"
+                href="/projects"
                 className="text-[#1a1a2e] font-medium hover:text-[#6c5ce7] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >

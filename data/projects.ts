@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   image: string;
   imageAlt: string;
+  type: string[];
 }
 
 export const projects: Project[] = [
@@ -13,6 +14,7 @@ export const projects: Project[] = [
     description: "Professional tax software solution with modern UI/UX design",
     image: "/DNA LIONS Tax Pro Software.png",
     imageAlt: "DNA LIONS Tax Pro Software",
+    type: ["Web Development"],
   },
   {
     id: "2",
@@ -20,6 +22,7 @@ export const projects: Project[] = [
     description: "Healthcare management platform with intuitive design",
     image: "/Logic TrueCare.png",
     imageAlt: "Logic TrueCare",
+    type: ["Branding", "Web Development"],
   },
   {
     id: "3",
@@ -27,5 +30,6 @@ export const projects: Project[] = [
     description: "Security services company branding and web presence",
     image: "/T&T Security Services LLC.png",
     imageAlt: "T&T Security Services LLC",
+    type: ["Branding","Web Development"],
   },
 ];
