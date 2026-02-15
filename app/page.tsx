@@ -93,17 +93,43 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-20">
+      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-32 md:py-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Creative Branding & Web Development
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
               A creative and technology-driven agency providing branding, design,
               and web development services for businesses seeking a modern and
               professional digital presence.
             </p>
+            
+            {/* Key Features */}
+            <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-4xl font-bold text-[#a29bfe] mb-2">40+</div>
+                <p className="text-gray-300 text-sm uppercase tracking-wide">Happy Clients</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-4xl font-bold text-[#a29bfe] mb-2">100+</div>
+                <p className="text-gray-300 text-sm uppercase tracking-wide">Projects Completed</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-4xl font-bold text-[#a29bfe] mb-2">5+</div>
+                <p className="text-gray-300 text-sm uppercase tracking-wide">Years Experience</p>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="mt-12">
+              <a
+                href="#packages"
+                className="inline-block bg-[#6c5ce7] hover:bg-[#5a4fd6] text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 text-lg"
+              >
+                View Our Packages
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -259,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* Package Cards */}
-      <section className="py-16 bg-white">
+      <section id="packages" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-12">
             Service Packages
