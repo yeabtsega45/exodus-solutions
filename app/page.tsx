@@ -72,26 +72,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/exodus-logo.png"
-              alt="Exodus Solutions Logo"
-              width={60}
-              height={60}
-              className="object-contain"
-            />
-            <div>
-              <h1 className="text-2xl font-bold text-[#1a1a2e]">
-                Exodus <span className="text-[#6c5ce7]">Solution</span>
-              </h1>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-32 md:py-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,7 +279,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-16 bg-gray-50">
+      <section id="projects" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
             Our Projects
@@ -373,7 +353,7 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-[#1a1a2e] text-white py-12">
+      <footer id="contact" className="bg-[#1a1a2e] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Contact Section */}
