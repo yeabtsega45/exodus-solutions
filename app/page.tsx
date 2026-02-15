@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-32 md:py-40">
+      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -129,8 +129,7 @@ export default function Home() {
                 together!
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We are a full-service digital agency specializing in web development,
-                branding and 360° Marketing. With experience working with over 40
+                We are a full-service digital agency specializing in branding and web development. With experience working with
                 clients, we have successfully driven revenue growth through innovative
                 digital solutions.
               </p>
@@ -142,7 +141,7 @@ export default function Home() {
                 {/* Experience Section */}
                 <div className="flex items-end gap-4">
                   <h3 className="text-7xl md:text-8xl font-extrabold text-white leading-none">
-                    5
+                    -
                   </h3>
                   <div className="pb-2">
                     <p className="uppercase text-sm font-semibold text-gray-300 tracking-wide">
@@ -157,13 +156,13 @@ export default function Home() {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
                   <div>
-                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">40+</p>
+                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">-</p>
                     <p className="text-sm text-gray-300 uppercase tracking-wide">
                       Clients
                     </p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">100+</p>
+                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">-</p>
                     <p className="text-sm text-gray-300 uppercase tracking-wide">
                       Projects
                     </p>
