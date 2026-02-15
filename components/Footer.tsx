@@ -63,7 +63,7 @@ function Footer() {
           <div className="mt-6 flex justify-center md:justify-end">
             <div className="flex items-center gap-2">
               <Image
-                src="/exodus-logo.png"
+                src="/exodus-logo-light.png"
                 alt="Exodus Solutions Logo"
                 width={40}
                 height={40}
