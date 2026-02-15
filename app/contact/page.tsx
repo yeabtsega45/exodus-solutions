@@ -102,12 +102,20 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-[#1a1a2e] mb-1">Email Us</h3>
-                      <a
-                        href="mailto:matiyassamuel86@gmail.com"
-                        className="text-[#6c5ce7] hover:text-[#5a4fd6] hover:underline transition-colors"
-                      >
-                        matiyassamuel86@gmail.com
-                      </a>
+                      <div className="flex flex-col">
+                        <a
+                          href="mailto:matiyassamuel86@gmail.com"
+                          className="text-[#6c5ce7] hover:text-[#5a4fd6] hover:underline transition-colors"
+                        >
+                          matiyassamuel86@gmail.com
+                        </a>
+                        <a
+                          href="mailto:yabtsega2022@gmail.com"
+                          className="text-[#6c5ce7] hover:text-[#5a4fd6] hover:underline transition-colors"
+                        >
+                          yabtsega2022@gmail.com
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -130,12 +138,20 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-[#1a1a2e] mb-1">Call Us</h3>
-                      <a
-                        href="tel:0940596262"
-                        className="text-[#6c5ce7] hover:text-[#5a4fd6] hover:underline transition-colors"
-                      >
-                        0940596262
-                      </a>
+                      <div className="flex flex-col">
+                        <a
+                          href="tel:0940596262"
+                          className="text-[#6c5ce7] hover:text-[#5a4fd6] hover:underline transition-colors"
+                        >
+                          0940596262
+                        </a>
+                        <a
+                          href="tel:0912704375"
+                          className="text-[#6c5ce7] hover:text-[#5a4fd6] hover:underline transition-colors"
+                        >
+                          0912704375
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
