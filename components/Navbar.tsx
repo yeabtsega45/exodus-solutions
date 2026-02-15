@@ -42,7 +42,7 @@ function Navbar() {
               Projects
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               className="text-[#1a1a2e] font-medium hover:text-[#6c5ce7] transition-colors"
             >
               Contact Us
@@ -102,7 +102,7 @@ function Navbar() {
                 Projects
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="text-[#1a1a2e] font-medium hover:text-[#6c5ce7] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
