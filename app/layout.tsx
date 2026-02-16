@@ -17,9 +17,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Exodus Solutions - Creative Branding & Web Development",
   description: "A creative and technology-driven agency providing branding, design, and web development services for businesses seeking a modern and professional digital presence.",
-  icons: {
-    icon: "/exodus-logo.png",
-  },
 };
 
 export default function RootLayout({

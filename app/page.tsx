@@ -101,18 +101,20 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center">
-            <div className="space-y-6 text-center max-w-2xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight">
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-12">
+            <div className="flex-1 flex items-center justify-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight text-center md:text-left">
                 Let's build, grow, and
                 <br />
                 <span className="text-[#6c5ce7]">elevate your brand</span>
                 <br />
                 together!
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+            </div>
+            <div className="flex-1 flex items-center justify-center">
+              <p className="text-lg text-gray-600 leading-relaxed text-center md:text-left max-w-lg">
                 We are a full-service digital agency specializing in branding and web development. With experience working with
                 clients, we have successfully driven revenue growth through innovative
                 digital solutions.
@@ -123,13 +125,13 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-8">
             Our Services
           </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+          <p className="text-lg text-gray-700 leading-relaxed">
             We craft complete brand identities and digital experiences for modern
             businesses. From strategic{" "}
             <span className="font-semibold">logo design</span>, cohesive{" "}
@@ -145,27 +147,29 @@ export default function Home() {
 
           {/* Service Highlights */}
           <div className="mt-12 bg-[#1a1a2e] text-white rounded-2xl px-6 py-10 md:px-10 shadow-xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-              {services.map((service) => (
-                <div key={service.number} className="space-y-3">
-                  <h3 className="text-5xl md:text-6xl font-extrabold text-white/90 tracking-tight">
-                    {service.number}
-                  </h3>
-                  <h4 className="text-lg font-semibold text-[#a29bfe] uppercase tracking-wide">
-                    {service.title}
-                  </h4>
-                  <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-xs mx-auto">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+                {services.map((service) => (
+                  <div key={service.number} className="space-y-3">
+                    <h3 className="text-5xl md:text-6xl font-extrabold text-white/90 tracking-tight">
+                      {service.number}
+                    </h3>
+                    <h4 className="text-lg font-semibold text-[#a29bfe] uppercase tracking-wide">
+                      {service.title}
+                    </h4>
+                    <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-xs mx-auto">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 bg-gray-50">
+      <section className="py-40 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
             Our Projects
