@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PackageCard from "@/components/PackageCard";
 import { projects } from "@/data/projects";
+import { services } from "@/data/services";
 
 export default function Home() {
   const packages: Array<{
@@ -74,7 +75,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-12 md:py-16">
+      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-24 md:py-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -85,30 +86,14 @@ export default function Home() {
               and web development services for businesses seeking a modern and
               professional digital presence.
             </p>
-            
-            {/* Key Features */}
-            <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <div className="text-4xl font-bold text-[#a29bfe] mb-2">40+</div>
-                <p className="text-gray-300 text-sm uppercase tracking-wide">Happy Clients</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <div className="text-4xl font-bold text-[#a29bfe] mb-2">100+</div>
-                <p className="text-gray-300 text-sm uppercase tracking-wide">Projects Completed</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <div className="text-4xl font-bold text-[#a29bfe] mb-2">5+</div>
-                <p className="text-gray-300 text-sm uppercase tracking-wide">Years Experience</p>
-              </div>
-            </div>
 
             {/* Call to Action */}
             <div className="mt-12">
               <a
-                href="#packages"
+                href="/projects"
                 className="inline-block bg-[#6c5ce7] hover:bg-[#5a4fd6] text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 text-lg"
               >
-                View Our Packages
+                View Our Projects
               </a>
             </div>
           </div>
@@ -118,9 +103,8 @@ export default function Home() {
       {/* About Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Text Section */}
-            <div className="space-y-6">
+          <div className="flex justify-center">
+            <div className="space-y-6 text-center max-w-2xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight">
                 Let's build, grow, and
                 <br />
@@ -134,42 +118,6 @@ export default function Home() {
                 digital solutions.
               </p>
             </div>
-
-            {/* Right Content Section - Stats */}
-            <div className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] rounded-lg p-8 md:p-12 text-white">
-              <div className="space-y-8">
-                {/* Experience Section */}
-                <div className="flex items-end gap-4">
-                  <h3 className="text-7xl md:text-8xl font-extrabold text-white leading-none">
-                    -
-                  </h3>
-                  <div className="pb-2">
-                    <p className="uppercase text-sm font-semibold text-gray-300 tracking-wide">
-                      years
-                    </p>
-                    <p className="text-xl md:text-2xl font-bold text-white">
-                      Of Experience
-                    </p>
-                  </div>
-                </div>
-
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/20">
-                  <div>
-                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">-</p>
-                    <p className="text-sm text-gray-300 uppercase tracking-wide">
-                      Clients
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-4xl font-bold text-[#a29bfe] mb-1">-</p>
-                    <p className="text-sm text-gray-300 uppercase tracking-wide">
-                      Projects
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -177,103 +125,41 @@ export default function Home() {
       {/* Services Overview */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-12">
+          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-8">
             Our Services
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Brand Identity */}
-            <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#6c5ce7]">
-              <h3 className="text-2xl font-bold text-[#1a1a2e] mb-4">
-                Brand Identity
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Delivering a cohesive and recognizable brand system.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-[#6c5ce7] mr-2">•</span>
-                  <span className="text-gray-700">
-                    <strong>Logo Design</strong> – Icons, fonts, color palette,
-                    and variations.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6c5ce7] mr-2">•</span>
-                  <span className="text-gray-700">
-                    <strong>Brand Guidelines</strong> – Usage rules, tone,
-                    typography, and color standards.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6c5ce7] mr-2">•</span>
-                  <span className="text-gray-700">
-                    <strong>Publication Design</strong> – Banner, flyer,
-                    brochure, billboard, business card, and letterhead.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6c5ce7] mr-2">•</span>
-                  <span className="text-gray-700">
-                    <strong>Social Media Kit</strong> – Profile icons, cover
-                    banners, and post templates.
-                  </span>
-                </li>
-              </ul>
-            </div>
+          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+            We craft complete brand identities and digital experiences for modern
+            businesses. From strategic{" "}
+            <span className="font-semibold">logo design</span>, cohesive{" "}
+            <span className="font-semibold">brand guidelines</span>, publication
+            materials, and social media kits, to{" "}
+            <span className="font-semibold">website design &amp; development</span>{" "}
+            that includes structured multi-page sites, static or CMS-powered
+            dynamic websites, responsive layouts, basic SEO setup, Google Maps
+            and contact form integration, domain &amp; hosting support, and
+            ongoing website maintenance — Exodus Solutions delivers a unified,
+            professional presence across every touchpoint.
+          </p>
 
-            {/* Website Design & Development */}
-            <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#1a1a2e]">
-              <h3 className="text-2xl font-bold text-[#1a1a2e] mb-4">
-                Website Design & Development
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Building professional and responsive websites tailored to the
-                client&apos;s goals.
-              </p>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-[#1a1a2e] mb-2">
-                    Website Structure
+          {/* Service Highlights */}
+          <div className="mt-12 bg-[#1a1a2e] text-white rounded-2xl px-6 py-10 md:px-10 shadow-xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+              {services.map((service) => (
+                <div key={service.number} className="space-y-3">
+                  <h3 className="text-5xl md:text-6xl font-extrabold text-white/90 tracking-tight">
+                    {service.number}
+                  </h3>
+                  <h4 className="text-lg font-semibold text-[#a29bfe] uppercase tracking-wide">
+                    {service.title}
                   </h4>
-                  <p className="text-gray-700 text-sm">
-                    Up to X pages (Home, About, Services, Contact, etc.).
-                    Additional pages upon request.
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-xs mx-auto">
+                    {service.description}
                   </p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-[#1a1a2e] mb-2">Type</h4>
-                  <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• Static Website (Informational, minimal content updates)</li>
-                    <li>• Dynamic Website (CMS-based, editable content, blog, admin dashboard, etc.)</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-[#1a1a2e] mb-2">Features</h4>
-                  <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• Responsive design (mobile-friendly)</li>
-                    <li>• Basic SEO setup</li>
-                    <li>• Google Maps and contact form integration</li>
-                    <li>• Domain & hosting setup (optional)</li>
-                    <li>• Website maintenance (optional plan)</li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Package Cards */}
-      <section id="packages" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-12">
-            Service Packages
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <PackageCard key={index} {...pkg} />
-            ))}
           </div>
         </div>
       </section>
