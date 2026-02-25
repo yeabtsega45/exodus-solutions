@@ -1,5 +1,4 @@
 import Image from "next/image";
-import PackageCard from "@/components/PackageCard";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
 
@@ -100,26 +99,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section className="py-40 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
+            Our Projects
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Showcasing our expertise through successful digital solutions and
+            branding projects
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+              >
+                <div className="relative h-64 bg-gray-100 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.type.map((type, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-xs font-semibold rounded-full bg-[#6c5ce7]/10 text-[#6c5ce7]"
+                    >
+                      {type}
+                    </span>
+                  ))}
+                </div>
+                  <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{project.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="bg-white py-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-12">
-            <div className="flex-1 flex items-center justify-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight text-center md:text-left">
-                Let's build, grow, and
-                <br />
-                <span className="text-[#6c5ce7]">elevate your brand</span>
-                <br />
-                together!
-              </h2>
-            </div>
-            <div className="flex-1 flex items-center justify-center">
-              <p className="text-lg text-gray-600 leading-relaxed text-center md:text-left max-w-lg">
-                We are a full-service digital agency specializing in branding and web development. With experience working with
-                clients, we have successfully driven revenue growth through innovative
-                digital solutions.
-              </p>
-            </div>
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight text-center mb-8">
+              Let's build, grow, and
+              <br />
+              <span className="text-[#6c5ce7]">elevate your brand</span>
+              <br />
+              together!
+            </h2>
           </div>
         </div>
       </section>
@@ -164,52 +200,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-40 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
-            Our Projects
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Showcasing our expertise through successful digital solutions and
-            branding projects
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
-              >
-                <div className="relative h-64 bg-gray-100 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.imageAlt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.type.map((type, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 text-xs font-semibold rounded-full bg-[#6c5ce7]/10 text-[#6c5ce7]"
-                    >
-                      {type}
-                    </span>
-                  ))}
-                </div>
-                  <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{project.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
