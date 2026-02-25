@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { projects } from "@/data/projects";
 
 type TabType = "All" | "Branding" | "Web Development";
@@ -57,13 +58,14 @@ export default function ProjectsPage() {
           {filteredProjects.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
-                <div
+                <Link
                   key={project.id}
+                  href={`/projects/${project.id}`}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
                 >
                   <div className="relative h-64 bg-gray-100 overflow-hidden">
                     <Image
-                      src={project.image}
+                      src={project.images[0]}
                       alt={project.imageAlt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -85,7 +87,7 @@ export default function ProjectsPage() {
                     </h3>
                     <p className="text-gray-600 text-sm">{project.description}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           ) : (
