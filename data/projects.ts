@@ -10,11 +10,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "egk-health",
-    title: "EGK Health Services",
-    description: "Visual identity and web presence for a healthcare provider.",
+    id: "egk-aircargo",
+    title: "EGK Aircargo Services",
+    description: "Visual identity and brand presence for an air cargo provider.",
     images: ["/projects/EGK 1.png", "/projects/EGK 2.png", "/projects/EGK 3.png", "/projects/EGK 4.png", "/projects/EGK 5.png"],
-    imageAlt: "EGK Health Services",
+    imageAlt: "EGK Aircargo Services",
     type: ["Branding"],
   },
   {
