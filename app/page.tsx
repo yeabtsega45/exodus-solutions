@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+import Link from "next/link";
 
 export default function Home() {
   const packages: Array<{
@@ -111,8 +112,9 @@ export default function Home() {
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <div
+              <Link
                 key={project.id}
+                href={`/projects/${project.id}`}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
               >
                 <div className="relative h-64 bg-gray-100 overflow-hidden">
@@ -139,8 +141,18 @@ export default function Home() {
                   </h3>
                   <p className="text-gray-600 text-sm">{project.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
+          </div>
+
+          {/* See more button */}
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center justify-center rounded-lg border border-[#6c5ce7] px-8 py-3 text-sm font-semibold text-[#6c5ce7] hover:bg-[#6c5ce7] hover:text-white transition-colors"
+            >
+              See more projects
+            </Link>
           </div>
         </div>
       </section>
