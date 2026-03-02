@@ -190,7 +190,7 @@ export default function Home() {
           </div>
 
           {/* Website Projects */}
-          <div>
+          <div className="pt-12">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-semibold text-[#1a1a2e]">
                 Website Projects
