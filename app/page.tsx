@@ -72,17 +72,37 @@ export default function Home() {
     },
   ];
 
+  const brandingProjects = projects
+    .filter((project) => project.type.includes("Branding"))
+    .slice(0, 3);
+
+  const webProjects = projects
+    .filter((project) => project.type.includes("Web Development"))
+    .slice(0, 3);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-linear-to-br from-[#1a1a2e] to-[#2d3748] text-white py-24 md:py-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden text-white py-24 md:py-30">
+        {/* Background image with gradient overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/home-page.jpg"
+            alt="Exodus Solutions hero background"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-br from-[#1a1a2e]/90 via-[#1a1a2e]/80 to-[#2d3748]/85" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Creative Branding & Web Development
+              Exodus Branding & Web Development
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-              A creative and technology-driven agency providing branding, design,
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed">
+              We are a creative and technology-driven agency providing branding, design,
               and web development services for businesses seeking a modern and
               professional digital presence.
             </p>
@@ -100,63 +120,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="py-30 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
-            Our Projects
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Showcasing our expertise through successful digital solutions and
-            branding projects
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.slice(0, 3).map((project) => (
-              <Link
-                key={project.id}
-                href={`/projects/${project.id}`}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
-              >
-                <div className="relative h-64 bg-gray-100 overflow-hidden">
-                  <Image
-                    src={project.images[0]}
-                    alt={project.imageAlt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {project.type.map((type, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-xs font-semibold rounded-full bg-[#6c5ce7]/10 text-[#6c5ce7]"
-                      >
-                        {type}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{project.description}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* See more button */}
-          <div className="mt-10 flex justify-center">
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center rounded-lg border border-[#6c5ce7] px-8 py-3 text-sm font-semibold text-[#6c5ce7] hover:bg-[#6c5ce7] hover:text-white transition-colors"
-            >
-              See all projects
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,6 +131,115 @@ export default function Home() {
               <br />
               together!
             </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
+            Our Projects
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Showcasing our expertise through successful digital solutions and
+            branding projects.
+          </p>
+
+          {/* Branding Projects */}
+          <div className="mb-12">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-semibold text-[#1a1a2e]">
+                Branding Projects
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {brandingProjects.map((project) => (
+                <Link
+                  key={project.id}
+                  href={`/projects/${project.id}`}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+                >
+                  <div className="relative h-64 bg-gray-100 overflow-hidden">
+                    <Image
+                      src={project.images[0]}
+                      alt={project.imageAlt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {project.type.map((type, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 text-xs font-semibold rounded-full bg-[#6c5ce7]/10 text-[#6c5ce7]"
+                        >
+                          {type}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{project.description}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Website Projects */}
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-semibold text-[#1a1a2e]">
+                Website Projects
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {webProjects.map((project) => (
+                <Link
+                  key={project.id}
+                  href={`/projects/${project.id}`}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+                >
+                  <div className="relative h-64 bg-gray-100 overflow-hidden">
+                    <Image
+                      src={project.images[0]}
+                      alt={project.imageAlt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {project.type.map((type, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 text-xs font-semibold rounded-full bg-[#6c5ce7]/10 text-[#6c5ce7]"
+                        >
+                          {type}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-xl font-bold text-[#1a1a2e] mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{project.description}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* See more button */}
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center justify-center rounded-lg border border-[#6c5ce7] px-8 py-3 text-sm font-semibold text-[#6c5ce7] hover:bg-[#6c5ce7] hover:text-white transition-colors"
+            >
+              See all projects
+            </Link>
           </div>
         </div>
       </section>
