@@ -121,16 +121,111 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-30">
+      <section className="bg-white py-24 md:py-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight text-center mb-8">
-              Let's build, grow, and
-              <br />
-              <span className="text-[#6c5ce7]">elevate your brand</span>
-              <br />
-              together!
-            </h2>
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            {/* Copy */}
+            <div>
+              <p className="inline-flex items-center rounded-full bg-[#6c5ce7]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#6c5ce7] mb-4">
+                About Exodus Solutions
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight mb-6">
+                Let's build, grow, and{" "}
+                <span className="text-[#6c5ce7]">elevate your brand</span>{" "}
+                together.
+              </h2>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+                Exodus Solutions is a branding and web studio dedicated to
+                helping businesses look as professional as they are. We combine
+                strategic thinking, thoughtful design, and modern technology to
+                create brands and websites that feel sharp, consistent, and
+                trustworthy.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2 mb-8">
+                <div className="rounded-2xl border border-gray-100 bg-gray-50 px-4 py-4">
+                  <h3 className="text-sm font-semibold text-[#1a1a2e] mb-1">
+                    Brand Identity & Design
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    From logo and color systems to print and social media,
+                    every detail is crafted to tell a clear, confident story.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-gray-100 bg-gray-50 px-4 py-4">
+                  <h3 className="text-sm font-semibold text-[#1a1a2e] mb-1">
+                    Websites that convert
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Fast, responsive, and easy-to-manage websites that are
+                    built to drive engagement, inquiries, and long-term trust.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center justify-center rounded-lg bg-[#6c5ce7] px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-[#5a4fd6] hover:shadow-lg transition-all"
+                >
+                  Explore our work
+                </Link>
+                <span className="text-sm text-gray-500">
+                  Tailored solutions for startups, growing businesses, and
+                  established brands.
+                </span>
+              </div>
+            </div>
+
+            {/* Highlights */}
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-[#6c5ce7]/5 blur-2xl" />
+              <div className="relative rounded-3xl bg-gray-50 border border-gray-100 p-8 md:p-10 shadow-sm">
+
+                <div className="space-y-4">
+                  <div className="flex gap-3">
+                    <span className="mt-1 h-6 w-6 flex items-center justify-center rounded-full bg-[#6c5ce7]/10 text-xs font-semibold text-[#6c5ce7]">
+                      01
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-[#1a1a2e]">
+                        Strategy first
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        We start with understanding your goals, audience, and
+                        positioning before we design or build anything.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="mt-1 h-6 w-6 flex items-center justify-center rounded-full bg-[#6c5ce7]/10 text-xs font-semibold text-[#6c5ce7]">
+                      02
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-[#1a1a2e]">
+                        Design with purpose
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        Every visual element is intentional, scalable, and easy
+                        to use across your brand touchpoints.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="mt-1 h-6 w-6 flex items-center justify-center rounded-full bg-[#6c5ce7]/10 text-xs font-semibold text-[#6c5ce7]">
+                      03
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-[#1a1a2e]">
+                        Long-term partnership
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        We support you beyond launch with updates, refinements,
+                        and continuous improvements.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
