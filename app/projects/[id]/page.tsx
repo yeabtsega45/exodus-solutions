@@ -75,10 +75,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               Project Overview
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              This project showcases Exodus Solutions&apos; capability to blend
-              strategic branding with modern digital experiences. From visual
-              identity to web presence, we focus on clarity, consistency, and
-              usability to help brands communicate their value effectively.
+              {project.overview ? project.overview : project.description}
             </p>
 
             <div className="flex flex-wrap gap-6 items-center justify-between">

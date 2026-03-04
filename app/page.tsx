@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight text-center mb-8">
@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-[#1a1a2e] text-center mb-4">
             Our Projects
