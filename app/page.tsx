@@ -25,7 +25,9 @@ export default function Home() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-br from-[#1a1a2e]/90 via-[#1a1a2e]/80 to-[#2d3748]/85" />
+          
+          {/* Gradient overlay */}
+          {/* <div className="absolute inset-0 bg-linear-to-br from-[#1a1a2e]/90 via-[#1a1a2e]/80 to-[#2d3748]/85" /> */}
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
