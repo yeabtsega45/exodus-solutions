@@ -19,7 +19,11 @@ export const projects: Project[] = [
       "/projects/EGK 2.png",
       "/projects/EGK 3.png",
       "/projects/EGK 4.png",
-      "/projects/EGK 5.png"
+      "/projects/EGK 5.png",
+      "/projects/EGK 6.png",
+      "/projects/EGK 7.png",
+      "/projects/1-07.png",
+      "/projects/1-08.png"
     ],
     imageAlt: "EGK Aircargo Services",
     type: ["Branding"],
@@ -46,6 +50,9 @@ The visual identity incorporates aviation-related elements and clean, profession
       "/projects/Abol Buna 3.png",
       "/projects/Abol Buna 4.png",
       "/projects/Abol Buna 5.png",
+      "/projects/Abol Buna 6.png",
+      "/projects/Abol Buna 7.png",
+      "/projects/Abol Buna 8.png"
     ],
     imageAlt: "Abol Buna Coffee Brand",
     type: ["Branding"],
@@ -71,6 +78,9 @@ The logo and overall visual identity follow a traditional design direction, refl
       "/projects/KBS Car Wash 3.png",
       "/projects/KBS Car Wash 4.png",
       "/projects/KBS Car Wash 5.png",
+      "/projects/3-05.png",
+      "/projects/3-06.png",
+      "/projects/3-07.png"
     ],
     imageAlt: "KBS Car Wash",
     type: ["Branding"],
@@ -131,7 +141,13 @@ The overall visual identity is playful yet professional, making the brand approa
     id: "ontime-logistics",
     title: "ONTIME Logistics",
     description: "Minimal, bold logo and branding for a logistics company.",
-    images: ["/projects/ONTIME.png"],
+    images: [
+      "/projects/ONTIME.png",
+      "/projects/4-01.png",
+      "/projects/4-02.png",
+      "/projects/4-03.png",
+      "/projects/4-04.png"
+    ],
     imageAlt: "ONTIME Logistics",
     type: ["Branding"],
     overview: `On Time is a newly established import and export company focused on providing fast, reliable, and precise services for clients who want to import goods from any country.
@@ -147,7 +163,14 @@ The primary color is a dark orange tone, chosen to communicate warmth, friendlin
     id: "rudo-pharmacy",
     title: "Rudo Pharmacy",
     description: "Clean, trustworthy visual identity for a modern pharmacy.",
-    images: ["/projects/Rudo Pharmacy.png"],
+    images: [
+      "/projects/Rudo Pharmacy.png",
+      "/projects/6-02.png",
+      "/projects/6-03.png",
+      "/projects/6-04.png",
+      "/projects/6-05.png",
+      "/projects/6-06.png"
+    ],
     imageAlt: "Rudo Pharmacy",
     type: ["Branding"],
     overview: `Rudo Pharmacy is a well-known pharmacy located in Addis Ababa, Ethiopia.
