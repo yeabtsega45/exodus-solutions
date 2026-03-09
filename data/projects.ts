@@ -98,46 +98,6 @@ The overall visual identity is playful yet professional, making the brand approa
 `
   },
   {
-    id: "kerchanshe-coffee",
-    title: "Kerchanshe Coffee",
-    description: "A coffee export website built using Next.js for the frontend and Strapi as the backend.",
-    images: [
-      "/projects/Kerchanshe.png",
-      "/projects/Kerchanshe Logo.png"
-    ],
-    imageAlt: "Kerchanshe Coffee",
-    type: ["Branding", "Web Development"],
-    website: "https://kerchanshecoffee.com/",
-    overview: `Kerchanshe Coffee's website was designed and developed with a focus on international trade and showcasing the brand's dedication to Ethiopian coffee excellence. The project utilized Next.js for a performant, modern frontend and Strapi CMS for scalable and flexible backend management. The result is a visually appealing, content-driven web experience tailored for coffee exporters and global buyers.`
-  },
-  {
-    id: "dna-lions-tax-pro",
-    title: "DNA LIONS Tax Pro Software",
-    description: "Professional tax software solution with modern UI/UX design.",
-    images: ["/projects/DNA Lions 1.png", "/projects/DNA Lions 2.png"],
-    imageAlt: "DNA LIONS Tax Pro Software",
-    type: ["Branding", "Web Development"],
-    website: "https://dnalions.com/",
-  },
-  {
-    id: "logic-truecare",
-    title: "Logic TrueCare",
-    description: "Healthcare management platform with intuitive branding and UI.",
-    images: ["/projects/Logic TrueCare.png"],
-    imageAlt: "Logic TrueCare",
-    type: ["Branding", "Web Development"],
-    website: "https://logictruecare.com/",
-  },
-  {
-    id: "tnt-security-services",
-    title: "T&T Security Services LLC",
-    description: "Security services company branding and professional web presence.",
-    images: ["/projects/T&T Security Services LLC.png"],
-    imageAlt: "T&T Security Services LLC",
-    type: ["Branding", "Web Development"],
-    website: "https://www.ttsecurityservicesllc.com/",
-  },
-  {
     id: "ontime-logistics",
     title: "ONTIME Logistics",
     description: "Minimal, bold logo and branding for a logistics company.",
@@ -187,5 +147,45 @@ Black (for typography)
 
 These colors represent health, growth, cleanliness, and reliability, forming a strong and consistent visual identity across all brand materials.
 `
+  },
+  {
+    id: "kerchanshe-coffee",
+    title: "Kerchanshe Coffee",
+    description: "A coffee export website built using Next.js for the frontend and Strapi as the backend.",
+    images: [
+      "/projects/Kerchanshe.png",
+      "/projects/Kerchanshe Logo.png"
+    ],
+    imageAlt: "Kerchanshe Coffee",
+    type: ["Branding", "Web Development"],
+    website: "https://kerchanshecoffee.com/",
+    overview: `Kerchanshe Coffee's website was designed and developed with a focus on international trade and showcasing the brand's dedication to Ethiopian coffee excellence. The project utilized Next.js for a performant, modern frontend and Strapi CMS for scalable and flexible backend management. The result is a visually appealing, content-driven web experience tailored for coffee exporters and global buyers.`
+  },
+  {
+    id: "dna-lions-tax-pro",
+    title: "DNA LIONS Tax Pro Software",
+    description: "Professional tax software solution with modern UI/UX design.",
+    images: ["/projects/DNA Lions 1.png", "/projects/DNA Lions 2.png"],
+    imageAlt: "DNA LIONS Tax Pro Software",
+    type: ["Branding", "Web Development"],
+    website: "https://dnalions.com/",
+  },
+  {
+    id: "logic-truecare",
+    title: "Logic TrueCare",
+    description: "Healthcare management platform with intuitive branding and UI.",
+    images: ["/projects/Logic TrueCare.png"],
+    imageAlt: "Logic TrueCare",
+    type: ["Branding", "Web Development"],
+    website: "https://logictruecare.com/",
+  },
+  {
+    id: "tnt-security-services",
+    title: "T&T Security Services LLC",
+    description: "Security services company branding and professional web presence.",
+    images: ["/projects/T&T Security Services LLC.png"],
+    imageAlt: "T&T Security Services LLC",
+    type: ["Branding", "Web Development"],
+    website: "https://www.ttsecurityservicesllc.com/",
   },
 ];
