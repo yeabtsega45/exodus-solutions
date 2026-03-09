@@ -155,34 +155,6 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Office Hours */}
-                <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[#a29bfe]">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[#a29bfe]/10 p-3 rounded-lg">
-                      <svg
-                        className="w-6 h-6 text-[#a29bfe]"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#1a1a2e] mb-2">Office Hours</h3>
-                      <p className="text-gray-600 text-sm">
-                        Monday - Friday: 9:00 AM - 6:00 PM
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        Saturday: 10:00 AM - 4:00 PM
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 

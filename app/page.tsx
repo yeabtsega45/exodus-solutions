@@ -4,74 +4,6 @@ import { services } from "@/data/services";
 import Link from "next/link";
 
 export default function Home() {
-  const packages: Array<{
-    name: string;
-    price: string;
-    services: string[];
-    brandIdentity: boolean;
-    webDev: "static" | "dynamic";
-  }> = [
-    {
-      name: "Basic",
-      price: "20,000 ETB",
-      services: [
-        "Logo Design (3 logo options)",
-        "Color Palette",
-        "Typography",
-        "Brand Pattern",
-        "Static Website (up to 5 pages)",
-        "Responsive Design",
-        "Basic SEO Setup",
-      ],
-      brandIdentity: true,
-      webDev: "static",
-    },
-    {
-      name: "Professional",
-      price: "30,000 ETB",
-      services: [
-        "Logo Design (5 logo options)",
-        "Color Palette",
-        "Typography",
-        "Brand Pattern",
-        "Stationery Design",
-        "Social Media Kit",
-        "Dynamic Website (CMS-based)",
-        "Up to 8 pages",
-        "Responsive Design",
-        "SEO Setup",
-        "Contact Form Integration",
-      ],
-      brandIdentity: true,
-      webDev: "dynamic",
-    },
-    {
-      name: "Premium",
-      price: "40,000 ETB",
-      services: [
-        "Logo Design (7 logo options)",
-        "Color Palette",
-        "Typography",
-        "Brand Pattern",
-        "Full Branding Collateral",
-        "Brand Guidelines",
-        "Publication Design",
-        "Social Media Kit",
-        "Dynamic Website (CMS-based)",
-        "Unlimited pages",
-        "Blog System",
-        "Admin Dashboard",
-        "Responsive Design",
-        "Advanced SEO",
-        "Google Maps Integration",
-        "Domain & Hosting Setup",
-        "Website Maintenance Plan",
-      ],
-      brandIdentity: true,
-      webDev: "dynamic",
-    },
-  ];
-
   const brandingProjects = projects
     .filter((project) => project.type.includes("Branding"))
     .slice(0, 3);
@@ -87,7 +19,7 @@ export default function Home() {
         {/* Background image with gradient overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/home-page.jpg"
+            src="/hero-image.png"
             alt="Exodus Solutions hero background"
             fill
             priority
@@ -102,7 +34,7 @@ export default function Home() {
               Exodus Branding & Web Development
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed">
-              We are a creative and technology-driven agency providing branding, design,
+              We are a creative and technology-driven team providing branding, design,
               and web development services for businesses seeking a modern and
               professional digital presence.
             </p>
